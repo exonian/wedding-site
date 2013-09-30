@@ -1,0 +1,14 @@
+Django==1.5.4
+Mezzanine==1.4.16
+Pillow==2.1.0
+argparse==1.2.1
+bleach==1.2.2
+distribute==0.6.34
+filebrowser-safe==0.2.28
+grappelli-safe==0.2.22
+html5lib==0.95
+oauthlib==0.6.0
+pytz==2013d
+requests==1.2.3
+requests-oauthlib==0.3.3
+wsgiref==0.1.2
