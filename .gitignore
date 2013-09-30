@@ -1,0 +1,4 @@
+*.pyc
+
+client_media
+static_media
