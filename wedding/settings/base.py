@@ -1,3 +1,4 @@
+import dj_database_url
 
 ######################
 # MEZZANINE SETTINGS #
@@ -87,7 +88,7 @@ USE_SOUTH = True
 # In the format (('Full Name', 'email@example.com'),
 #                ('Full Name', 'anotheremail@example.com'))
 ADMINS = (
-    # ('Your Name', 'your_email@domain.com'),
+    ('Michael Blatherwick', 'michael.blatherwick@exeter.oxon.org'),
 )
 MANAGERS = ADMINS
 
@@ -98,14 +99,14 @@ MANAGERS = ADMINS
 # timezone as the operating system.
 # If running in a Windows environment this must be set to the same as your
 # system time zone.
-TIME_ZONE = None
+TIME_ZONE = 'Europe/London'
 
 # If you set this to True, Django will use timezone-aware datetimes.
 USE_TZ = True
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = "en"
+LANGUAGE_CODE = "en-gb"
 
 # A boolean that turns on/off debug mode. When set to ``True``, stack traces
 # are displayed for error pages. Should always be set to ``False`` in
@@ -156,20 +157,7 @@ FILE_UPLOAD_PERMISSIONS = 0644
 #############
 
 DATABASES = {
-    "default": {
-        # Add "postgresql_psycopg2", "mysql", "sqlite3" or "oracle".
-        "ENGINE": "django.db.backends.",
-        # DB name or path to database file if using sqlite3.
-        "NAME": "",
-        # Not used with sqlite3.
-        "USER": "",
-        # Not used with sqlite3.
-        "PASSWORD": "",
-        # Set to empty string for localhost. Not used with sqlite3.
-        "HOST": "",
-        # Set to empty string for default. Not used with sqlite3.
-        "PORT": "",
-    }
+    "default": dj_database_url.config(default='postgres://localhost/wedding')
 }
 
 
@@ -178,9 +166,10 @@ DATABASES = {
 #########
 
 import os
+from unipath import Path
 
 # Full filesystem path to the project.
-PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = Path(__file__).ancestor(3)
 
 # Name of the directory for the project.
 PROJECT_DIRNAME = PROJECT_ROOT.split(os.sep)[-1]
@@ -198,25 +187,25 @@ STATIC_URL = "/static/"
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = os.path.join(PROJECT_ROOT, STATIC_URL.strip("/"))
+STATIC_ROOT = PROJECT_ROOT.child('static_media')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
-MEDIA_URL = STATIC_URL + "media/"
+MEDIA_URL = '/client_media/'
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
-MEDIA_ROOT = os.path.join(PROJECT_ROOT, *MEDIA_URL.strip("/").split("/"))
+MEDIA_ROOT = PROJECT_ROOT.child('client_media')
 
 # Package/module name to import the root urlpatterns from for the project.
-ROOT_URLCONF = "%s.urls" % PROJECT_DIRNAME
+ROOT_URLCONF = '{}.urls'.format(PROJECT_DIRNAME)
 
 # Put strings here, like "/home/html/django_templates"
 # or "C:/www/django/templates".
 # Always use forward slashes, even on Windows.
 # Don't forget to use absolute paths, not relative paths.
-TEMPLATE_DIRS = (os.path.join(PROJECT_ROOT, "templates"),)
+TEMPLATE_DIRS = PROJECT_ROOT.child('templates')
 
 
 ################
@@ -326,19 +315,6 @@ DEBUG_TOOLBAR_CONFIG = {"INTERCEPT_REDIRECTS": False}
 #     "SECRET_KEY": SECRET_KEY,
 #     "NEVERCACHE_KEY": NEVERCACHE_KEY,
 # }
-
-
-##################
-# LOCAL SETTINGS #
-##################
-
-# Allow any settings to be defined in local_settings.py which should be
-# ignored in your version control system allowing for settings to be
-# defined per machine.
-try:
-    from local_settings import *
-except ImportError:
-    pass
 
 
 ####################
