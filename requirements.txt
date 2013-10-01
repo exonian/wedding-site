@@ -2,11 +2,13 @@ Django==1.5.4
 Markdown==2.3.1
 Mezzanine==1.4.16
 Pillow==2.1.0
+South==0.8.2
 Unipath==1.0
 argparse==1.2.1
 bleach==1.2.2
 distribute==0.6.34
 dj-database-url==0.2.2
+django-braces==1.2.2
 filebrowser-safe==0.2.28
 grappelli-safe==0.2.22
 html5lib==0.95
@@ -18,4 +20,5 @@ psycopg2==2.5.1
 pytz==2013d
 requests==1.2.3
 requests-oauthlib==0.3.3
+six==1.4.1
 wsgiref==0.1.2

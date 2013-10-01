@@ -248,6 +248,7 @@ INSTALLED_APPS = (
     "mezzanine.galleries",
     "mezzanine.twitter",
     "rsvp",
+    "south",
     #"mezzanine.mobile",
 )
 
