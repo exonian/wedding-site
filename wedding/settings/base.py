@@ -236,6 +236,7 @@ INSTALLED_APPS = (
     "django.contrib.sites",
     "django.contrib.sitemaps",
     "django.contrib.staticfiles",
+    "mdown",
     "mezzanine.boot",
     "mezzanine.conf",
     "mezzanine.core",
@@ -330,6 +331,12 @@ DEBUG_TOOLBAR_CONFIG = {"INTERCEPT_REDIRECTS": False}
 #     "SECRET_KEY": SECRET_KEY,
 #     "NEVERCACHE_KEY": NEVERCACHE_KEY,
 # }
+
+
+# Mezzanine-mdown #
+
+RICHTEXT_WIDGET_CLASS = 'mdown.forms.WmdWidget'
+RICHTEXT_FILTER = 'mdown.filters.plain'
 
 
 ####################
