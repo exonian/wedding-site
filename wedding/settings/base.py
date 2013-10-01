@@ -236,6 +236,7 @@ INSTALLED_APPS = (
     "django.contrib.sites",
     "django.contrib.sitemaps",
     "django.contrib.staticfiles",
+    "crispy_forms",
     "mdown",
     "users",
     "mezzanine.accounts",
@@ -342,6 +343,8 @@ RICHTEXT_FILTER = 'mdown.filters.plain'
 
 # Custom user model #
 AUTH_USER_MODEL = 'users.WeddingUser'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap'
 
 ####################
 # DYNAMIC SETTINGS #

@@ -9,6 +9,7 @@ bleach==1.2.2
 distribute==0.6.34
 dj-database-url==0.2.2
 django-braces==1.2.2
+django-crispy-forms==1.4.0
 filebrowser-safe==0.2.28
 grappelli-safe==0.2.22
 html5lib==0.95
