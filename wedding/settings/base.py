@@ -237,12 +237,12 @@ INSTALLED_APPS = (
     "django.contrib.sitemaps",
     "django.contrib.staticfiles",
     "mdown",
+    "users",
     "mezzanine.accounts",
     "mezzanine.boot",
     "mezzanine.conf",
     "mezzanine.core",
     "mezzanine.generic",
-    "mezzanine.blog",
     "mezzanine.forms",
     "mezzanine.pages",
     "mezzanine.galleries",
@@ -340,6 +340,8 @@ DEBUG_TOOLBAR_CONFIG = {"INTERCEPT_REDIRECTS": False}
 RICHTEXT_WIDGET_CLASS = 'mdown.forms.WmdWidget'
 RICHTEXT_FILTER = 'mdown.filters.plain'
 
+# Custom user model #
+AUTH_USER_MODEL = 'users.WeddingUser'
 
 ####################
 # DYNAMIC SETTINGS #
