@@ -11,3 +11,8 @@ class RSVPView(LoginRequiredMixin, FormValidMessageMixin, UpdateView):
 
     def get_object(self):
         return self.request.user
+
+    def get_form(self, form_class):
+        form = super(RSVPView, self).get_form(form_class)
+        form.fields['attending'].choices = self.request.user.get_customised_attending_choices()
+        return form

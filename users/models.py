@@ -1,6 +1,8 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
+from wedding.utils import cap_first
+
 class WeddingUser(AbstractUser):
     """
     Just an extension of the Django user model
@@ -10,9 +12,9 @@ class WeddingUser(AbstractUser):
     ATTENDING_MAYBE = 0
     ATTENDING_NO = -1
     ATTENDING_CHOICES = (
-        (ATTENDING_YES, "Yes, I'd love to!"),
-        (ATTENDING_MAYBE, "I'm not sure yet - I'll have to get back to you"),
-        (ATTENDING_NO, "I'm afraid I can't make it"),
+        (ATTENDING_YES, "Yes"),
+        (ATTENDING_MAYBE, "Maybe"),
+        (ATTENDING_NO, "No"),
     )
 
     attending = models.IntegerField(
@@ -20,3 +22,44 @@ class WeddingUser(AbstractUser):
         choices = ATTENDING_CHOICES,
         default = ATTENDING_MAYBE,
     )
+
+    number = models.IntegerField(
+        default = 1,
+    )
+
+    def is_multiple_guests(self):
+        if self.number > 1:
+            return True
+        return False
+
+    def get_user_pronoun_dict(self):
+        """
+        Returns a dictionary of pronouns and verbs referring to the user,
+        which require knowledge of whether it represents a single wedding
+        guest or multiple guests.
+        """
+        if self.is_multiple_guests():
+            pronoun_dict = {
+                "user": "we",
+                "user_is": "we're",
+                "user_will": "we'll",
+                "user_would": "we'd",
+            }
+        else:
+            pronoun_dict = {
+                "user": "I",
+                "user_is": "I'm",
+                "user_will": "I'll",
+                "user_would": "I'd",
+            }
+        return pronoun_dict
+
+    def get_customised_attending_choices(self):
+        return (
+            (self.ATTENDING_YES,
+             cap_first("Yes, {user_would} love to!".format(**self.get_user_pronoun_dict()))),
+            (self.ATTENDING_MAYBE,
+             cap_first("{user_is} not sure yet - {user_will} have to get back to you".format(**self.get_user_pronoun_dict()))),
+            (self.ATTENDING_NO,
+             cap_first("{user_is} afraid {user} can't make it".format(**self.get_user_pronoun_dict()))),
+        )
