@@ -347,6 +347,8 @@ AUTH_USER_MODEL = 'users.WeddingUser'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap'
 
+ACCOUNTS_PROFILE_FORM_CLASS = 'users.forms.UserForm'
+
 ####################
 # DYNAMIC SETTINGS #
 ####################
