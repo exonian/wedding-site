@@ -31,6 +31,22 @@ class WeddingUser(AbstractUser):
         default = 1,
     )
 
+    short_name = models.CharField(
+        blank = True,
+        max_length = 255,
+    )
+
+    long_name = models.CharField(
+        blank = True,
+        max_length = 255,
+    )
+
+    def get_short_name(self):
+        return self.short_name or self.long_name or ''
+
+    def get_full_name(self):
+        return self.long_name or self.short_name or ''
+
     def is_multiple_guests(self):
         if self.number > 1:
             return True
