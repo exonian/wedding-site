@@ -236,6 +236,7 @@ INSTALLED_APPS = (
     "django.contrib.sites",
     "django.contrib.sitemaps",
     "django.contrib.staticfiles",
+    "wedding",
     "crispy_forms",
     "mdown",
     "users",
