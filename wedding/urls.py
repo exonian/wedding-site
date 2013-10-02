@@ -62,6 +62,7 @@ urlpatterns = patterns("",
     # WILL NEVER BE MATCHED!
 
     ("^rsvp/", include("rsvp.urls")),
+    ("^account/signup/$", 'django.views.defaults.page_not_found'),
     ("^", include("mezzanine.urls")),
 
 )
