@@ -22,6 +22,10 @@ class WeddingUser(AbstractUser):
         choices = ATTENDING_CHOICES,
         default = ATTENDING_MAYBE,
     )
+    rsvp_message = models.TextField(
+        "Add a message, if you'd like",
+        blank = True,
+    )
 
     number = models.IntegerField(
         default = 1,

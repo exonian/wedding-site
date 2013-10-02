@@ -7,7 +7,10 @@ class RSVPForm(forms.ModelForm):
 
     class Meta:
         model = get_user_model()
-        fields = ['attending']
+        fields = [
+            'attending',
+            'rsvp_message',
+        ]
 
     def __init__(self, *args, **kwargs):
         self.helper = FormHelper()
@@ -16,6 +19,7 @@ class RSVPForm(forms.ModelForm):
         self.helper.form_action = "."
         self.helper.layout = crispy_forms.layout.Layout(
             'attending',
+            'rsvp_message',
             crispy_forms.layout.Submit('submit', 'Reply'),
         )
         super(RSVPForm, self).__init__(*args, **kwargs)
