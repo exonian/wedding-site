@@ -1,0 +1,26 @@
+{% extends "pages/page.html" %}
+
+{% block extra_css %}
+    {{ block.super }}
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" />
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.ie.css" />
+    <![endif]-->
+{% endblock extra_css %}
+
+{% block extra_js %}
+    {{ block.super }}
+    <script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>
+{% endblock extra_js %}
+
+{% block main %}
+    {{ block.super }}
+    {{ page.richtextpage.content|safe }}
+    <script type="text/javascript" defer="defer">
+        var map = L.map('map').setView([51.741832,-1.264504], 13);
+        L.tileLayer('http://{s}.tile.cloudmade.com/4118d40909644f1d8bc68247b679ab08/109869/256/{z}/{x}/{y}.png', {
+            attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
+            maxZoom: 18
+        }).addTo(map);
+    </script>
+{% endblock %}
