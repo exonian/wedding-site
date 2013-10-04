@@ -1,4 +1,4 @@
-{% extends "pages/page.html" %}
+{% extends "pages/richtextpage.html" %}
 
 {% block extra_css %}
     {{ block.super }}
@@ -15,7 +15,6 @@
 
 {% block main %}
     {{ block.super }}
-    {{ page.richtextpage.content|safe }}
     <script type="text/javascript" defer="defer">
         var map = L.map('map').setView([51.741832,-1.264504], 13);
         L.tileLayer('http://{s}.tile.cloudmade.com/4118d40909644f1d8bc68247b679ab08/109869/256/{z}/{x}/{y}.png', {
