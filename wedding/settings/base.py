@@ -187,7 +187,7 @@ from unipath import Path
 PROJECT_ROOT = Path(__file__).ancestor(3)
 
 # Name of the directory for the project.
-PROJECT_DIRNAME = PROJECT_ROOT.split(os.sep)[-1]
+PROJECT_DIRNAME = 'wedding'
 
 # Every cache key will get prefixed with this value - here we set it to
 # the name of the directory the project is in to try and use something
