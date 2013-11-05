@@ -97,7 +97,7 @@ USE_SOUTH = True
 # MAIN DJANGO SETTINGS #
 ########################
 
-ALLOWED_HOSTS = get_env_variable('ALLOWED_HOSTS')
+ALLOWED_HOSTS = get_env_variable('ALLOWED_HOSTS').split(',')
 
 # People who get code error notifications.
 # In the format (('Full Name', 'email@example.com'),
