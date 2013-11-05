@@ -12,6 +12,7 @@ django-braces==1.2.2
 django-crispy-forms==1.4.0
 filebrowser-safe==0.2.28
 grappelli-safe==0.2.22
+gunicorn==18.0
 html5lib==0.95
 ipdb==0.8
 ipython==1.1.0
