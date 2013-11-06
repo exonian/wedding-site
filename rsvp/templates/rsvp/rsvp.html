@@ -1,0 +1,12 @@
+{% extends 'pages/page.html' %}
+{% load crispy_forms_tags %}
+
+{% block main %}
+
+    {% if user.attending == 1 %}<h2>Fantastic! <small>You've said you can come</small></h2>
+    {% elif user.attending == -1 %}<h2>Ah that's a shame! <small>You've said you can't come</small></h2>
+    {% else %}<h2>Are you coming? <small>We can't wait to hear from you!</small></h2>
+    {% endif %}
+
+    {% crispy form form.helper %}
+{% endblock main %}

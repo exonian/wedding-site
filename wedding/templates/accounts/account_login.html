@@ -1,0 +1,15 @@
+{% extends "accounts/account_form.html" %}
+{% load i18n future %}
+
+{% block main %}
+
+{% if request.user.is_authenticated %}
+    <p>{% trans "You're already logged in." %}</p>
+{% else %}
+    {{ block.super }}
+    {% url "mezzanine_password_reset" as password_reset_url %}
+    {% blocktrans %}<p>You can <a href="{{ password_reset_url }}">reset your password</a> if you've forgotten it, as long as you've logged in and set an email address already. If you haven't you'll just have to get in touch with Michael and Alex.</p>{% endblocktrans %}
+{% endif %}
+
+{% endblock %}
+

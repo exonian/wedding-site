@@ -97,7 +97,7 @@ USE_SOUTH = True
 # MAIN DJANGO SETTINGS #
 ########################
 
-ALLOWED_HOSTS = get_env_variable('ALLOWED_HOSTS')
+ALLOWED_HOSTS = get_env_variable('ALLOWED_HOSTS').split(',')
 
 # People who get code error notifications.
 # In the format (('Full Name', 'email@example.com'),
@@ -187,7 +187,7 @@ from unipath import Path
 PROJECT_ROOT = Path(__file__).ancestor(3)
 
 # Name of the directory for the project.
-PROJECT_DIRNAME = PROJECT_ROOT.split(os.sep)[-1]
+PROJECT_DIRNAME = 'wedding'
 
 # Every cache key will get prefixed with this value - here we set it to
 # the name of the directory the project is in to try and use something
@@ -236,17 +236,21 @@ INSTALLED_APPS = (
     "django.contrib.sites",
     "django.contrib.sitemaps",
     "django.contrib.staticfiles",
+    "wedding",
+    "crispy_forms",
     "mdown",
+    "users",
+    "mezzanine.accounts",
     "mezzanine.boot",
     "mezzanine.conf",
     "mezzanine.core",
     "mezzanine.generic",
-    "mezzanine.blog",
     "mezzanine.forms",
     "mezzanine.pages",
     "mezzanine.galleries",
     "mezzanine.twitter",
-    #"mezzanine.accounts",
+    "rsvp",
+    "south",
     #"mezzanine.mobile",
 )
 
@@ -338,6 +342,12 @@ DEBUG_TOOLBAR_CONFIG = {"INTERCEPT_REDIRECTS": False}
 RICHTEXT_WIDGET_CLASS = 'mdown.forms.WmdWidget'
 RICHTEXT_FILTER = 'mdown.filters.plain'
 
+# Custom user model #
+AUTH_USER_MODEL = 'users.WeddingUser'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap'
+
+ACCOUNTS_PROFILE_FORM_CLASS = 'users.forms.UserForm'
 
 ####################
 # DYNAMIC SETTINGS #
