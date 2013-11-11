@@ -249,6 +249,7 @@ INSTALLED_APPS = (
     "mezzanine.pages",
     "mezzanine.galleries",
     "mezzanine.twitter",
+    "mezzanine_blocks",
     "rsvp",
     "south",
     #"mezzanine.mobile",
