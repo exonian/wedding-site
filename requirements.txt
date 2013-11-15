@@ -26,3 +26,5 @@ requests==1.2.3
 requests-oauthlib==0.3.3
 six==1.4.1
 wsgiref==0.1.2
+
+git+git://github.com/renyi/mezzanine-blocks.git@5dbf56a290e116631f74b6ac0e9e486ce585db4a
