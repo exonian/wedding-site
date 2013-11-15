@@ -18,7 +18,6 @@ gunicorn==18.0
 html5lib==0.95
 ipdb==0.8
 ipython==1.1.0
-mezzanine-blocks==0.9
 mezzanine-mdown==0.1a3
 oauthlib==0.6.0
 psycopg2==2.5.1
@@ -27,3 +26,5 @@ requests==1.2.3
 requests-oauthlib==0.3.3
 six==1.4.1
 wsgiref==0.1.2
+
+git+git://github.com/renyi/mezzanine-blocks.git@5dbf56a290e116631f74b6ac0e9e486ce585db4a
