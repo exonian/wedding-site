@@ -88,6 +88,8 @@
 <div class="span3 right">
     {% nevercache %}
     {% include "includes/user_panel.html" %}
+    {% include "rsvp/includes/rsvp_status.html" %}
+    <a class="btn" href="{% url 'rsvp' %}">RSVP</a>
     {% endnevercache %}
 </div>
 
