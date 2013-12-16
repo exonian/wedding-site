@@ -357,6 +357,10 @@ CRISPY_TEMPLATE_PACK = 'bootstrap'
 
 ACCOUNTS_PROFILE_FORM_CLASS = 'users.forms.UserForm'
 
+
+# Don't redirect to accounts/profile/
+LOGIN_REDIRECT_URL = '/'
+
 ####################
 # DYNAMIC SETTINGS #
 ####################
