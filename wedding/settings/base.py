@@ -244,7 +244,6 @@ INSTALLED_APPS = (
     "django.contrib.staticfiles",
     "wedding",
     "crispy_forms",
-    "mdown",
     "users",
     "mezzanine.accounts",
     "mezzanine.boot",
@@ -256,6 +255,7 @@ INSTALLED_APPS = (
     "mezzanine.galleries",
     "mezzanine.twitter",
     "mezzanine_blocks",
+    "mezzanine_pagedown",
     "rsvp",
     "south",
     #"mezzanine.mobile",
@@ -344,10 +344,11 @@ DEBUG_TOOLBAR_CONFIG = {"INTERCEPT_REDIRECTS": False}
 # }
 
 
-# Mezzanine-mdown #
+# Mezzanine-pagedown #
 
-RICHTEXT_WIDGET_CLASS = 'mdown.forms.WmdWidget'
-RICHTEXT_FILTER = 'mdown.filters.plain'
+RICHTEXT_WIDGET_CLASS = 'mezzanine_pagedown.widgets.PageDownWidget'
+RICHTEXT_FILTER = 'mezzanine_pagedown.filters.extra'
+RICHTEXT_FILTER_LEVEL = 3
 
 # Custom user model #
 AUTH_USER_MODEL = 'users.WeddingUser'
