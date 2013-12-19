@@ -82,7 +82,7 @@
 <div class="container-fluid">
 <div class="row-fluid">
 
-<div class="span3 left hidden-phone">
+<div class="span3 left sidebar hidden-phone">
     {% block left_panel %}
     <div class="panel tree">{% page_menu "pages/menus/tree.html" %}</div>
     {% endblock %}
@@ -93,7 +93,7 @@
     {% block main %}{% endblock %}
 </div>
 
-<div class="span3 right">
+<div class="span3 sidebar right">
     {% nevercache %}
     {% include "includes/user_panel.html" %}
     {% block rsvp_panel %}
