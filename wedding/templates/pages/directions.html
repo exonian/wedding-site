@@ -23,9 +23,20 @@
             maxZoom: 18
         }).addTo(map);
 
-        var rail = new L.KML("{{ STATIC_URL }}kml/rail.kml", {async: true});
-        rail.on("loaded", function(e) { map.fitBounds(e.target.getBounds()); });
-        map.addLayer(rail);
-        map.addControl(new L.Control.Layers({}, {'By train':rail}));
+        map.transport_layers = {
+            "rail": new L.KML("{{ STATIC_URL }}kml/rail.kml", {async: true}),
+            "coach": new L.KML("{{ STATIC_URL }}kml/coach.kml", {async: true}),
+            "car": new L.KML("{{ STATIC_URL }}kml/car.kml", {async: true})
+        };
+
+        map.current_transport_layer = map.transport_layers.rail;
+
+        map.current_transport_layer.on("loaded", function(e) { map.fitBounds(e.target.getBounds()); });
+
+        var map_tabs = $('#map-tabs').on("click", "a", function(e) {
+            map.removeLayer(map.current_transport_layer);
+            map.current_transport_layer = map.transport_layers[$(e.target).attr('href').slice(1)];
+            map.addLayer(map.current_transport_layer);
+        });
     </script>
 {% endblock %}
