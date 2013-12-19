@@ -11,3 +11,6 @@ a[href^="http"]:after {
   height: 35em; }
   #map img {
     box-shadow: None; }
+
+.sidebar h2 small {
+  display: block; }
