@@ -32,6 +32,7 @@
         map.current_transport_layer = map.transport_layers.rail;
 
         map.current_transport_layer.on("loaded", function(e) { map.fitBounds(e.target.getBounds()); });
+        map.addLayer(map.current_transport_layer);
 
         var map_tabs = $('#map-tabs').on("click", "a", function(e) {
             map.removeLayer(map.current_transport_layer);
