@@ -105,7 +105,7 @@
     {% block email_address_panel %}
         {% if not user.email %}
             <div class="panel">
-                <p><a href="{% url "profile" request.user.username as profile_url %}">
+                <p><a href="{% url "profile_update" %}">
                 Let us know your email address</a> so we can keep you up to date with
                 the plans and arrangements.</p>
             </div>
