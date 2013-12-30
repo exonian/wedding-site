@@ -1,3 +1,5 @@
+import datetime
+
 import crispy_forms
 from crispy_forms.helper import FormHelper
 from django import forms
@@ -23,3 +25,9 @@ class RSVPForm(forms.ModelForm):
             crispy_forms.layout.Submit('submit', 'Reply'),
         )
         super(RSVPForm, self).__init__(*args, **kwargs)
+
+    def save(self, *args, **kwargs):
+        obj = super(RSVPForm, self).save(commit=False)
+        obj.rsvp_date = datetime.datetime.today()
+        obj.save(*args, **kwargs)
+        return obj
