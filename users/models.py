@@ -26,6 +26,10 @@ class WeddingUser(AbstractUser):
         "Add a message, if you'd like",
         blank = True,
     )
+    rsvp_date = models.DateField(
+        blank = True,
+        null = True,
+    )
 
     number = models.IntegerField(
         default = 1,
