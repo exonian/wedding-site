@@ -4,6 +4,7 @@ import crispy_forms
 from crispy_forms.helper import FormHelper
 from django import forms
 from django.contrib.auth import get_user_model
+from django.contrib.sites.models import Site
 from templated_email import send_templated_mail
 
 class RSVPForm(forms.ModelForm):
@@ -31,15 +32,26 @@ class RSVPForm(forms.ModelForm):
         obj = super(RSVPForm, self).save(commit=False)
         obj.rsvp_date = datetime.datetime.today()
         obj.save(*args, **kwargs)
-        if obj.email:
-            self.send_email(obj)
+        self.send_emails(obj)
         return obj
 
-    def send_email(self, user, *args, **kwargs):
+    def send_emails(self, user, *args, **kwargs):
+        context = {
+            'user': user,
+            'site': Site.objects.get_current(),
+        }
+        # to the user
+        if obj.email:
+            send_templated_mail(
+                template_name='rsvp/rsvp',
+                from_email='wedding@michaelblatherwick.co.uk',
+                recipient_list=[user.email],
+                context=context,
+            )
+        # to us
         send_templated_mail(
-            template_name='rsvp/rsvp',
-            from_email='thanks@michaelblatherwick.co.uk',
-            recipient_list=[user.email],
-            context={'user':user,},
-            bcc=['wedding@michaelblatherwick.co.uk'],
+            template_name='rsvp/rsvp-notification',
+            from_email='wedding@michaelblatherwick.co.uk',
+            recipient_list=['wedding@michaelblatherwick.co.uk'],
+            context=context,
         )
