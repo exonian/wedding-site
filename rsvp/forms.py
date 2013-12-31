@@ -41,7 +41,7 @@ class RSVPForm(forms.ModelForm):
             'site': Site.objects.get_current(),
         }
         # to the user
-        if obj.email:
+        if user.email:
             send_templated_mail(
                 template_name='rsvp/rsvp',
                 from_email='wedding@michaelblatherwick.co.uk',
