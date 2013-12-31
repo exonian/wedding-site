@@ -1,0 +1,8 @@
+{% block subject %}{{ user.short_name }} RSVPed ({{ user.get_attending_display }}){% endblock %}
+
+{% block plain %}{{ user.short_name }} RSVPed "{{ user.get_attending_display|lower }}" on {{ user.rsvp_date|date:"D d M Y" }}{% if user.rsvp_message %} and added this message:
+    {{ user.rsvp_message }}
+{% else %}.{% endif %}
+
+{{ site.domain }}
+{% endblock plain %}
