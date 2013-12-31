@@ -87,3 +87,6 @@ class WeddingUser(AbstractUser):
             (self.ATTENDING_NO,
              cap_first("{user_is} afraid {user} can't make it".format(**self.get_user_pronoun_dict()))),
         )
+
+    def get_customised_attending_choice(self):
+        return dict(self.get_customised_attending_choices())[self.attending]
