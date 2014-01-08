@@ -1,0 +1,6 @@
+{% block subject %}{{ user.short_name }} {% if had_email %}updated{% else %}set{% endif %} their email address{% endblock %}
+
+{% block plain %}{{ user.short_name }} {% if had_email %}updated{% else %}set{% endif %} their email address to: {{ user.email }}
+
+{{ site.domain }}
+{% endblock plain %}
