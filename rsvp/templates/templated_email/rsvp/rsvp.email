@@ -1,0 +1,16 @@
+{% block subject %}Thanks for RSVPing, {{ user.short_name }}{% endblock %}
+
+{% block plain %}Thanks for RSVPing to your invitation to Alex & Michael's wedding, {{ user.short_name }}. You said {{ user.get_attending_display|lower }}{% if user.rsvp_message %} and added this message:
+    {{ user.rsvp_message }}
+{% else %}.{% endif %}
+
+{{ site.domain }}
+{% endblock plain %}
+
+{% block html %}
+    <h2>Thanks for RSVPing to your invitation to Alex & Michael's wedding invitation, {{ user.short_name }}.</h2>
+    <p>You said <em>{{ user.get_attending_display|lower }}</em>{% if user.rsvp_message %} and added this message:</p>
+    <blockquote>{{ user.rsvp_message }}</blockquote>
+{% else %}.</p>{% endif %}
+
+<a href="{{ site.domain }}">{{ site.domain }}</a>{% endblock html %}

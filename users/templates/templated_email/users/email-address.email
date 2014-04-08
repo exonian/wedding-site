@@ -1,0 +1,17 @@
+{% block subject %}Thanks for {% if had_email %}updating{% else %}setting{% endif %} your email address, {{ user.short_name }}{% endblock %}
+
+{% block plain %}Thanks for {% if had_email %}updating{% else %}setting{% endif %} your email address on Alex & Michael's wedding website, {{ user.short_name }}.
+
+{% if not had_email and user.rsvp_date %}{% filter removetags:"h2 small" %}{% include "rsvp/includes/rsvp_status.html" %}{% endfilter %}
+(you RSVPed on {{ user.rsvp_date|date:"D d M Y" }}){% endif %}
+
+{{ site.domain }}
+{% endblock plain %}
+
+{% block html %}
+    <p>Thanks for {% if had_email %}updating{% else %}setting{% endif %} your email address on Alex & Michael's wedding website, {{ user.short_name }}.</p>
+
+{% if not had_email and user.rsvp_date %}{% include "rsvp/includes/rsvp_status.html" %}
+<p>(you RSVPed on {{ user.rsvp_date|date:"D d M Y" }})</p>{% endif %}
+
+<a href="{{ site.domain }}">{{ site.domain }}</a>{% endblock html %}
