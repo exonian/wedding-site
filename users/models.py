@@ -35,6 +35,10 @@ class WeddingUser(AbstractUser):
         default = 1,
     )
 
+    plus_one = models.BooleanField(
+        default = False,
+    )
+
     short_name = models.CharField(
         blank = True,
         max_length = 255,
