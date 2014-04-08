@@ -5,5 +5,9 @@
 
 {% block main %}
     {% include "rsvp/includes/rsvp_status.html" %}
+    {% if user.plus_one %}
+        Feel free to bring a 'plus one', but please let us know if you plan to do so.
+    {% endif %}
+    <hr />
     {% crispy form form.helper %}
 {% endblock main %}
