@@ -39,6 +39,7 @@
 				<Icon>
 					<href>http://www.gstatic.com/mapspro/images/stock/1453-trans-parking.png</href>
 				</Icon>
+                <hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction" />
 			</IconStyle>
 		</Style>
 		<Style id='icon-503-DB4436'>
@@ -48,6 +49,7 @@
 				<Icon>
 					<href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
 				</Icon>
+                <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction" />
 			</IconStyle>
 		</Style>
 		<Style id='line-DB4436-4'>

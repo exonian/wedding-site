@@ -48,6 +48,7 @@
 				<Icon>
 					<href>http://www.gstatic.com/mapspro/images/stock/1459-trans-train.png</href>
 				</Icon>
+                <hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction" />
 			</IconStyle>
 		</Style>
 		<Style id='icon-503-0BA9CC'>
@@ -57,6 +58,7 @@
 				<Icon>
 					<href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
 				</Icon>
+                <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction" />
 			</IconStyle>
 		</Style>
 		<Style id='line-0BA9CC-4'>
