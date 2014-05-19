@@ -14,3 +14,8 @@ a[href^="http"]:after {
 
 .sidebar h2 small {
   display: block; }
+
+div.main {
+  background: #fff;
+  padding: 1em;
+}
