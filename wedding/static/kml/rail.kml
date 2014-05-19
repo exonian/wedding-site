@@ -10,7 +10,7 @@
 			</Point>
 		</Placemark>
 		<Placemark>
-			<styleUrl>#line-F4B400-4</styleUrl>
+			<styleUrl>#line-D698AD-4</styleUrl>
 			<name>Walk from the railway station</name>
 			<description><![CDATA[There are shorter routes, but along the river and through Grandpont Nature Reserve is undoubtedly the nicest.]]></description>
 			<LineString>
@@ -73,9 +73,9 @@
 				<width>4</width>
 			</LineStyle>
 		</Style>
-		<Style id='line-F4B400-4'>
+		<Style id='line-D698AD-4'>
 			<LineStyle>
-				<color>ff00B4F4</color>
+				<color>ffAD98D6</color>
 				<width>4</width>
 			</LineStyle>
 		</Style>

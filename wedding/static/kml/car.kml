@@ -12,7 +12,7 @@
 			</LineString>
 		</Placemark>
 		<Placemark>
-			<styleUrl>#line-F8971B-4</styleUrl>
+			<styleUrl>#line-3F5BA9-4</styleUrl>
 			<name>Walk from bus</name>
 			<LineString>
 				<tessellate>1</tessellate>
@@ -52,15 +52,15 @@
                 <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction" />
 			</IconStyle>
 		</Style>
-		<Style id='line-DB4436-4'>
+		<Style id='line-3F5BA9-4'>
 			<LineStyle>
-				<color>ff3644DB</color>
+				<color>ffA95B3F</color>
 				<width>4</width>
 			</LineStyle>
 		</Style>
-		<Style id='line-F8971B-4'>
+		<Style id='line-DB4436-4'>
 			<LineStyle>
-				<color>ff1B97F8</color>
+				<color>ff3644DB</color>
 				<width>4</width>
 			</LineStyle>
 		</Style>
