@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<kml xmlns='http://www.opengis.net/kml/2.2'>
+	<Document>
+		<name>Hogacre</name>
+		<Placemark>
+			<styleUrl>#icon-1379</styleUrl>
+			<name>Hogacre Common</name>
+			<Point>
+				<coordinates>-1.2645113468170166,51.74181537606249,0.0</coordinates>
+			</Point>
+		</Placemark>
+		<Style id='icon-1379'>
+			<IconStyle>
+				<scale>1.1</scale>
+				<Icon>
+					<href>http://www.gstatic.com/mapspro/images/stock/1379-rec-park.png</href>
+				</Icon>
+                <hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction" />
+			</IconStyle>
+		</Style>
+	</Document>
+</kml>

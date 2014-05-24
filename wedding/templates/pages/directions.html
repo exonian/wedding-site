@@ -47,6 +47,9 @@
         map.current_transport_layer.on("loaded", function(e) { map.fitBounds(e.target.getBounds()); });
         map.addLayer(map.current_transport_layer);
 
+        var hogacre = new L.KML("{{ STATIC_URL }}kml/hogacre.kml", {async: true});
+        map.hogacre_layers = new L.LayerGroup([hogacre]).addTo(map);
+
         var map_tabs = $('#map-tabs').on("click", "a", function(e) {
             map.removeLayer(map.current_transport_layer);
             map.current_transport_layer = map.transport_layers[$(e.target).attr('href').slice(1)];
