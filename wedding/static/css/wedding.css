@@ -15,8 +15,14 @@ a[href^="http"]:after {
 .sidebar h2 small {
   display: block; }
 
-div.main {
+div.main,
+.panel {
   background: #fff;
+  border-radius: 0;
+  border: 1px solid #ebdfdf;
+}
+
+div.main {
   padding: 1em;
 }
 

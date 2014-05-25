@@ -22,7 +22,6 @@
 	#nav ul, #nav2 ul{width:102px;}
 	.menu-li-inside{width:104px;}
 	.date-area{top:50px;}
-	.name-area{background:url(../_images/label-bg.png) no-repeat;background-position:center center;}
 	
 	.two-column{width:48%;}
 	.three-column{width:32%;}
@@ -71,7 +70,6 @@
 	#nav ul, #nav2 ul{width:102px;}
 	.menu-li-inside{width:104px;}
 	.date-area{top:50px;}
-	.name-area{background:url(../_images/label-bg.png) no-repeat;background-position:center 65px;}
 	
 	.two-column{width:47%;}
 	.three-column{width:31%;}
@@ -120,7 +118,6 @@
 	.menu-center{display:none;}
 	.menu-li-inside{width:98px;}
 	.date-area{top:0px;}
-	.name-area{background:url(../_images/label-bg.png) no-repeat;background-position:center 65px;}
 	
 	.two-column{width:47%;}
 	.three-column{width:31%;}
