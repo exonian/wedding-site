@@ -32,11 +32,29 @@ body {
 
 .nav li a:hover,
 .nav li a:focus {
-  background: #ebdfdf;
+  background: #ebdfdf !important;
+  color: #e44a6c !important;
 }
 
-.nav-list > .active > a,
-.nav-list > .active > a:hover,
-.nav-list > .active > a:focus {
+.nav .active a,
+.nav .active a:hover,
+.nav .active a:focus {
+  background: #e44a6c !important;
+  color: #fff !important;
+}
+
+.navbar {
+  margin: 0;
+  border-radius: 0;
+  border: 1px solid #ebdfdf;
+}
+
+.navbar-inner {
+  background: #fff;
+}
+
+a.btn.btn-navbar:hover,
+a.btn.btn-navbar:focus,
+a.btn.btn-navbar {
   background: #e44a6c;
 }
