@@ -53,8 +53,14 @@ body {
   background: #fff;
 }
 
+a.btn {
+  background: #ebdfdf;
+}
+
+a.btn.btn-danger,
+.btn.btn-primary,
+a.btn.btn-navbar,
 a.btn.btn-navbar:hover,
-a.btn.btn-navbar:focus,
-a.btn.btn-navbar {
+a.btn.btn-navbar:focus {
   background: #e44a6c;
 }
