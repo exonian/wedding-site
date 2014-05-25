@@ -36,9 +36,9 @@ body {
   color: #e44a6c !important;
 }
 
-.nav .active a,
-.nav .active a:hover,
-.nav .active a:focus {
+.nav .active > a,
+.nav .active > a:hover,
+.nav .active > a:focus {
   background: #e44a6c !important;
   color: #fff !important;
 }
