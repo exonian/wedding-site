@@ -1,0 +1,50 @@
+/*-----------------------------------------------------------------------------------
+	Theme Name: Happy Ending
+	Theme URI: http://themes.pulyavserdce.com
+/*-----------------------------------------------------------------------------------*/
+
+@charset "utf-8";
+
+	.form-select-2{height:25px;}
+	
+	.controller{width:942px;}
+	.slider{}
+	.full-width{}
+	.full-width-borderless{}
+	#top{height:257px;background:url(../_images/top.png) center no-repeat;}
+	#menu{margin-top:-20px;}
+	.menu-left, .menu-center, .menu-right{width:314px;}
+	#nav ul, #nav2 ul{width:102px;}
+	.menu-li-inside{width:104px;}
+	.date-area{top:50px;}
+	.name-area{background:url(../_images/label-bg.png) no-repeat;background-position:center center;}
+	
+	.two-column{width:48%;}
+	.three-column{width:32%;}
+	.three-column-double{width:64%;}
+	.four-column{width:24%;}
+	.four-column-double{width:48%;}
+	.four-column-triple{width:72%;}
+
+	
+	#slides{width:892px;}
+	#slides .slides_container{width:892px;height:372px;}
+	#slides .slides_container div.slide{width:892px;height:372px;}
+	
+	#gift3 .jcarousel-skin-tango .jcarousel-clip-horizontal{width:642px!important;height:60px;}
+	#gift2 .jcarousel-skin-tango .jcarousel-clip-horizontal{width:428px!important;height:60px;}
+	#gift1 .jcarousel-skin-tango .jcarousel-clip-horizontal{width:214px!important;height:60px;}
+	.jcarousel-skin-tango .jcarousel-item{width:190px;height:60px;}
+	.carousel-width{}
+
+	.form-message{width:94%;}
+	.form-select-2{width:44%;}
+	
+	.blog-date{margin-top:50px;}
+	
+	.image-area-list-2 li a{width:406px;margin:15px;height:163px;}
+	.image-area-list-3 li a{width:265px;margin:13px;height:106px;}
+	.image-area-list-4 li a{width:192px;margin:13px;height:76px;}
+	.image-area-list-grid li a{width:76px;margin:11px;height:76px;}
+	
+	.bg-footer{min-height:325px!important;}
