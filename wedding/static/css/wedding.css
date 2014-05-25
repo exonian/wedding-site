@@ -29,3 +29,14 @@ div.main {
 body {
   padding-top: 0;
 }
+
+.nav li a:hover,
+.nav li a:focus {
+  background: #ebdfdf;
+}
+
+.nav-list > .active > a,
+.nav-list > .active > a:hover,
+.nav-list > .active > a:focus {
+  background: #e44a6c;
+}
