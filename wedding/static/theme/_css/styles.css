@@ -1,0 +1,155 @@
+/*-----------------------------------------------------------------------------------
+	Theme Name: Happy Ending
+	Theme URI: http://themes.pulyavserdce.com
+/*-----------------------------------------------------------------------------------*/
+
+@charset "utf-8";
+
+
+/*--------------------------------------------------------
+	1.Desktops
+--------------------------------------------------------*/
+
+@media screen and (min-width:1001px) {
+
+	.controller{width:942px;}
+	.slider{}
+	.full-width{}
+	.full-width-borderless{}
+	#top{height:257px;background:url(../_images/top.png) center no-repeat;}
+	#menu{margin-top:-20px;}
+	.menu-left, .menu-center, .menu-right{width:314px;}
+	#nav ul, #nav2 ul{width:102px;}
+	.menu-li-inside{width:104px;}
+	.date-area{top:50px;}
+	.name-area{background:url(../_images/label-bg.png) no-repeat;background-position:center center;}
+	
+	.two-column{width:48%;}
+	.three-column{width:32%;}
+	.three-column-double{width:64%;}
+	.four-column{width:24%;}
+	.four-column-double{width:48%;}
+	.four-column-triple{width:72%;}
+
+	
+	#slides{width:892px;}
+	#slides .slides_container{width:892px;height:372px;}
+	#slides .slides_container div.slide{width:892px;height:372px;}
+	
+	#gift3 .jcarousel-skin-tango .jcarousel-clip-horizontal{width:642px!important;height:60px;}
+	#gift2 .jcarousel-skin-tango .jcarousel-clip-horizontal{width:428px!important;height:60px;}
+	#gift1 .jcarousel-skin-tango .jcarousel-clip-horizontal{width:214px!important;height:60px;}
+	.jcarousel-skin-tango .jcarousel-item{width:190px;height:60px;}
+	.carousel-width{}
+
+	.form-message{width:94%;}
+	.form-select-2{width:44%;}
+	
+	.blog-date{margin-top:50px;}
+	
+	.image-area-list-2 li a{width:406px;margin:15px;height:163px;}
+	.image-area-list-3 li a{width:265px;margin:13px;height:106px;}
+	.image-area-list-4 li a{width:192px;margin:13px;height:76px;}
+	.image-area-list-grid li a{width:76px;margin:11px;height:76px;}
+	
+}
+	
+/*--------------------------------------------------------
+	2.Tablets (800x600)
+--------------------------------------------------------*/
+
+@media screen and (min-width:799px) and (max-width:1000px) {
+
+	.controller{width:800px;}
+	.slider{width:97%;}
+	.full-width{width:94%;}
+	.full-width-borderless{width:100%;}
+	#top{height:257px;background:url(../_images/top.png) center no-repeat;}
+	#menu{margin-top:100px;}
+	.menu-left, .menu-right{width:314px;}
+	.menu-center{width:172px;}
+	#nav ul, #nav2 ul{width:102px;}
+	.menu-li-inside{width:104px;}
+	.date-area{top:50px;}
+	.name-area{background:url(../_images/label-bg.png) no-repeat;background-position:center 65px;}
+	
+	.two-column{width:47%;}
+	.three-column{width:31%;}
+	.three-column-double{width:64%;}
+	.four-column{width:23%;}
+	.four-column-double{width:48%;}
+	.four-column-triple{width:72%;}
+
+	
+	#slides{width:751px;}
+	#slides .slides_container{width:751px;height:320px;}
+	#slides .slides_container div.slide{width:751px;height:320px;}
+	
+	#gift3 .jcarousel-skin-tango .jcarousel-clip-horizontal{width:540px!important;height:60px;}
+	#gift2 .jcarousel-skin-tango .jcarousel-clip-horizontal{width:360px!important;height:60px;}
+	#gift1 .jcarousel-skin-tango .jcarousel-clip-horizontal{width:180px!important;height:60px;}
+	.jcarousel-skin-tango .jcarousel-item{width:156px;height:49px;}
+	.carousel-width{width:156px;}
+	
+	.form-message{width:94%;}
+	.form-select-2{width:44%;}
+	
+	.blog-date{margin-top:50px;}
+	
+	.image-area-list-2 li a{width:355px;margin:10px;height:100%;}
+	.image-area-list-3 li a{width:230px;margin:10px;height:100%;}
+	.image-area-list-4 li a{width:171px;margin:8px;height:100%;}
+	.image-area-list-grid li a{width:76px;margin:8px 8px 0px 8px;height:100%;}
+	
+}
+
+/*--------------------------------------------------------
+	2.Tablets (600x800)
+--------------------------------------------------------*/
+
+@media screen and (max-width:799px) {
+
+	.controller{width:600px;}
+	.slider{width:96%;}
+	.full-width{width:94%;}
+	.full-width-borderless{width:100%;}
+	#top{height:169px;background:url(../_images/top-600.png) center no-repeat;}
+	#menu{margin-top:25px;}
+	.menu-left, .menu-right{width:300px;}
+	#nav ul, #nav2 ul{width:96px;}
+	.menu-center{display:none;}
+	.menu-li-inside{width:98px;}
+	.date-area{top:0px;}
+	.name-area{background:url(../_images/label-bg.png) no-repeat;background-position:center 65px;}
+	
+	.two-column{width:47%;}
+	.three-column{width:31%;}
+	.three-column-double{width:62%;}
+	.four-column{width:23%;}
+	.four-column-double{width:48%;}
+	.four-column-triple{width:72%;}
+
+	
+	#slides{width:551px;}
+	#slides .slides_container{width:551px;height:234px;}
+	#slides .slides_container div.slide{width:551px;height:234px;}
+	
+	#gift3 .jcarousel-skin-tango .jcarousel-clip-horizontal{width:396px!important;height:60px;}
+	#gift2 .jcarousel-skin-tango .jcarousel-clip-horizontal{width:264px!important;height:60px;}
+	#gift1 .jcarousel-skin-tango .jcarousel-clip-horizontal{width:132px!important;height:60px;}
+	.jcarousel-skin-tango .jcarousel-item{width:108px;height:34px;}
+	.carousel-width{width:108px;}
+	
+	.form-message{width:91%;}
+	.form-select-2{width:41%;}
+	
+	.blog-date{margin-top:30px;}
+	
+	.image-area-list-2 li a{width:255px;margin:10px;height:102px;}
+	.image-area-list-3 li a{width:162px;margin:10px;height:100%;}
+	.image-area-list-4 li a{width:120px;margin:8px;height:100%;}
+	.image-area-list-grid li a{width:76px;margin:7px 7px 0px 7px;height:100%;}
+	
+}
+
+	

@@ -19,3 +19,7 @@ div.main {
   background: #fff;
   padding: 1em;
 }
+
+body {
+  padding-top: 0;
+}
