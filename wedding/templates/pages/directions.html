@@ -18,13 +18,23 @@
     {{ block.super }}
     <script type="text/javascript" defer="defer">
         var map = L.map('map').setView([51.741832,-1.264504], 13);
-        L.tileLayer('http://{s}.tile.stamen.com/{variant}/{z}/{x}/{y}.png', {
+        var watercolor = L.tileLayer('http://{s}.tile.stamen.com/{variant}/{z}/{x}/{y}.png', {
             attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data {attribution.OpenStreetMap}',
             subdomains: 'abcd',
             variant: 'watercolor',
             minZoom: 3,
             maxZoom: 16
         }).addTo(map);
+        var osm = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+            minZoom: 3,
+            maxZoom: 16
+        });
+        var baseLayers = {
+            'watercolour': watercolor,
+            'street map': osm
+        };
+        L.control.layers(baseLayers).addTo(map);
 
         map.transport_layers = {
             "rail": new L.KML("{{ STATIC_URL }}kml/rail.kml", {async: true}),
@@ -36,6 +46,9 @@
 
         map.current_transport_layer.on("loaded", function(e) { map.fitBounds(e.target.getBounds()); });
         map.addLayer(map.current_transport_layer);
+
+        var hogacre = new L.KML("{{ STATIC_URL }}kml/hogacre.kml", {async: true});
+        map.hogacre_layers = new L.LayerGroup([hogacre]).addTo(map);
 
         var map_tabs = $('#map-tabs').on("click", "a", function(e) {
             map.removeLayer(map.current_transport_layer);

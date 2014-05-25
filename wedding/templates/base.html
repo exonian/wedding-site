@@ -8,7 +8,7 @@
 <meta name="keywords" content="{% block meta_keywords %}{% endblock %}">
 <meta name="description" content="{% block meta_description %}{% endblock %}">
 <title>{% block meta_title %}{% endblock %}{% if settings.SITE_TITLE %} | {{ settings.SITE_TITLE }}{% endif %}</title>
-<link rel="shortcut icon" href="{% static "img/favicon.ico" %}">
+<link rel="shortcut icon" href="{% static "favicon.ico" %}">
 
 {% ifinstalled mezzanine.blog %}
 <link rel="alternate" type="application/rss+xml" title="RSS" href="{% url "blog_post_feed" "rss" %}">
@@ -29,6 +29,7 @@
 {% endif %}
 {% endifinstalled %}
 <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+<link rel="stylesheet" href="{{ STATIC_URL }}theme/_css/style.css" />
 <link rel="stylesheet" href="{{ STATIC_URL }}css/wedding.css">
 {% block extra_css %}{% endblock %}
 {% endcompress %}
@@ -47,6 +48,11 @@
 
 </head>
 <body id="{% block body_id %}body{% endblock %}">
+<div class="bg-top"></div>
+<div id="top">
+    <div class="date-area center-text"><span><big>16</big><br /><small>August</small></span></div>
+</div>
+
 
 <div class="navbar navbar-fixed-top visible-phone">
 <div class="navbar-inner">
@@ -88,8 +94,8 @@
     {% endblock %}
 </div>
 
-<div class="span6 middle">
-    <h1>{% block title %}{% endblock %}</h1>
+<div class="span6 middle main">
+    <div class="name-area center-text">{% block title %}{% endblock %}</div>
     {% block main %}{% endblock %}
 </div>
 
@@ -117,22 +123,26 @@
 </div>
 </div>
 
-<footer>
+<footer class="bg-footer">
 <div class="container">
-{% page_menu "pages/menus/footer.html" %}
-<p>
-    {% trans "Powered by" %}
-    <a href="http://mezzanine.jupo.org">Mezzanine</a>{% ifinstalled cartridge.shop %},
-    <a href="http://cartridge.jupo.org">Cartridge</a>{% endifinstalled %}
-    {% trans "and" %}
-    <a href="http://www.djangoproject.com">Django</a>
-    <span class="separator">|</span>
-    {% trans "Theme by" %} <a href="http://twitter.github.com/bootstrap/">Bootstrap</a>
-    {% ifinstalled mezzanine.mobile %}
-    <span class="separator">|</span>
-    <a href="{% url "set_device" "mobile" %}?next={{ request.path }}">{% trans "View Mobile Site" %}</a>
-    {% endifinstalled %}
-</p>
+<div class="row">
+    <div class="span6">
+        <div class="contact-item">
+            {% trans "Built using" %}
+            <a class="blog-lightcolor" href="http://mezzanine.jupo.org">Mezzanine</a>
+            {% trans "for" %}
+            <a class="blog-lightcolor" href="http://www.djangoproject.com">Django</a>
+        </div>
+    </div>
+    <div class="span6">
+        <div class="contact-item mail-lightcolor"><a class="blog-lightcolor" href="mailto:wedding@michaelblatherwick.co.uk">wedding.michaelblatherwick.co.uk</a></div>
+        {% if user.is_authenticated %}
+        <div class="contact-item phone-lightcolor">07768 285175 (Alex)</div>
+        <div class="contact-item phone-lightcolor">07581 228624 (Michael)</div>
+        <div class="contact-item skype-lightcolor">michael.blatherwick</div>
+        {% endif %}
+    </div>
+</div>
 </div>
 </footer>
 

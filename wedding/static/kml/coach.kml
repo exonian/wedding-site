@@ -23,6 +23,7 @@
 				<Icon>
 					<href>http://www.gstatic.com/mapspro/images/stock/1423-trans-bus.png</href>
 				</Icon>
+                <hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction" />
 			</IconStyle>
 		</Style>
 		<Style id='line-7C3592-4'>
