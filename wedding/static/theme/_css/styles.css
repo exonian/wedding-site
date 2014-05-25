@@ -22,6 +22,8 @@
 	#nav ul, #nav2 ul{width:102px;}
 	.menu-li-inside{width:104px;}
 	.date-area{top:50px;}
+	.date-area span big{font-size:100px;letter-spacing:7px;line-height:100px;}
+	.date-area span small{font-size:50px;letter-spacing:3px;}
 	
 	.two-column{width:48%;}
 	.three-column{width:32%;}
@@ -70,6 +72,8 @@
 	#nav ul, #nav2 ul{width:102px;}
 	.menu-li-inside{width:104px;}
 	.date-area{top:50px;}
+	.date-area span big{font-size:100px;letter-spacing:7px;line-height:100px;}
+	.date-area span small{font-size:50px;letter-spacing:3px;}
 	
 	.two-column{width:47%;}
 	.three-column{width:31%;}
@@ -118,6 +122,8 @@
 	.menu-center{display:none;}
 	.menu-li-inside{width:98px;}
 	.date-area{top:0px;}
+	.date-area span big{font-size:80px;letter-spacing:7px;line-height:110px;}
+	.date-area span small{font-size:35px;letter-spacing:3px;}
 	
 	.two-column{width:47%;}
 	.three-column{width:31%;}
