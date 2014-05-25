@@ -64,3 +64,20 @@ a.btn.btn-navbar:hover,
 a.btn.btn-navbar:focus {
   background: #e44a6c;
 }
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin: 0 0 10em;
+}
+
+.bg-footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 10em;
+  width: 100%;
+}
