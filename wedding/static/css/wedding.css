@@ -71,13 +71,13 @@ html {
 }
 
 body {
-  margin: 0 0 10em;
+  margin: 0 0 175px;
 }
 
 .bg-footer {
   position: absolute;
   left: 0;
   bottom: 0;
-  height: 10em;
+  height: 120px;
   width: 100%;
 }
