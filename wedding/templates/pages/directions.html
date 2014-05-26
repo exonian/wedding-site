@@ -54,6 +54,7 @@
             map.removeLayer(map.current_transport_layer);
             map.current_transport_layer = map.transport_layers[$(e.target).attr('href').slice(1)];
             map.addLayer(map.current_transport_layer);
+            map.fitBounds(map.current_transport_layer.getBounds().pad(0.2));
         });
     </script>
 {% endblock %}
