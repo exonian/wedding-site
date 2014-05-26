@@ -1,7 +1,7 @@
 {% extends 'pages/page.html' %}
 {% load block_tags %}
 
-{% block title %}Alex & Michael are getting married!{% endblock %}
+{% block title %}Dear {{ user.short_name }}{% endblock %}
 
 {% block main %}
     {% flatblock "Logged-in home page intro text" %}
