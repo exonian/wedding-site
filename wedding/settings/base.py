@@ -257,6 +257,7 @@ INSTALLED_APPS = (
     "mezzanine_blocks",
     "mezzanine_pagedown",
     "rsvp",
+    "food",
     "south",
     #"mezzanine.mobile",
 )

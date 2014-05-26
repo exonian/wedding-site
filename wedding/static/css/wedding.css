@@ -16,7 +16,8 @@ a[href^="http"]:after {
   display: block; }
 
 div.main,
-.panel {
+.panel,
+.alert {
   background: #fff;
   border-radius: 0;
   border: 1px solid #ebdfdf;
@@ -24,6 +25,10 @@ div.main,
 
 div.main {
   padding: 1em;
+}
+
+div.alert {
+  color: #e44a6c;
 }
 
 body {

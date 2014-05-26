@@ -1,0 +1,13 @@
+{% block subject %}Thanks for replying, {{ user.short_name }}{% endblock %}
+
+{% block plain %}Thanks for letting us know that you {{ food.get_bringing_status }}.
+You can review your response at {{ site.domain }}{{ url }}
+
+{{ site.domain }}
+{% endblock plain %}
+
+{% block html %}
+    <h2>Thanks for letting us know that you {{ food.get_bringing_status }}.</h2>
+    <p>You can review your response at <a href="{{ site.domain }}{{ url }}">{{ site.domain }}{{ url }}</a></p>
+    <a href="{{ site.domain }}">{{ site.domain }}</a>
+{% endblock html %}

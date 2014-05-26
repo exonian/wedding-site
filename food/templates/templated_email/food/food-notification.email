@@ -1,0 +1,13 @@
+{% block subject %}{{ user.short_name }} said that they {{ food.get_bringing_status }}{% endblock %}
+
+{% block plain %}{{ user.short_name }} replied that they {{ food.get_bringing_status }} on {{ food.reply_date|date:"D d M Y" }}
+
+{{ food.name }}
+{{ food.description }}
+
+Portions: {{ food.portions }}
+Vegan: {{ food.get_is_vegan_display }}
+Gluten free: {{ food.get_is_gluten_free_display }}
+
+{{ site.domain }}
+{% endblock plain %}
