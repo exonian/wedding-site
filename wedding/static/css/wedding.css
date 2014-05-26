@@ -86,3 +86,11 @@ body {
   height: 120px;
   width: 100%;
 }
+
+input,
+textarea,
+select {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 28px;
+}
