@@ -1,0 +1,9 @@
+{% extends 'pages/page.html' %}
+{% load crispy_forms_tags %}
+
+{% block meta_title %}Food{% endblock %}
+{% block title %}Food{% endblock %}
+
+{% block main %}
+    {% crispy form form.helper %}
+{% endblock main %}
