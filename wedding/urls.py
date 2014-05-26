@@ -16,6 +16,7 @@ urlpatterns = patterns("",
 
     url("^$", views.HomeView.as_view(), name="home"),
     ("^rsvp/", include("rsvp.urls")),
+    ("^gifts-food/food/", include("food.urls")),
     ("^account/signup/$", 'django.views.defaults.page_not_found'),
     ("^", include("mezzanine.urls")),
 
