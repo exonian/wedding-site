@@ -20,6 +20,7 @@ class FoodForm(forms.ModelForm):
             'portions',
             'is_vegan',
             'is_gluten_free',
+            'nuts',
         ]
 
     def __init__(self, *args, **kwargs):
@@ -42,6 +43,7 @@ class FoodForm(forms.ModelForm):
                 'portions',
                 'is_vegan',
                 'is_gluten_free',
+                'nuts',
             ),
             crispy_forms.layout.Submit('submit', 'Reply'),
         )
