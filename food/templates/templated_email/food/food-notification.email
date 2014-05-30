@@ -8,6 +8,7 @@
 Portions: {{ food.portions }}
 Vegan: {{ food.get_is_vegan_display }}
 Gluten free: {{ food.get_is_gluten_free_display }}
+Nuts: {{ food.nuts }}
 
 {{ site.domain }}
 {% endblock plain %}

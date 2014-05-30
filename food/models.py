@@ -42,6 +42,13 @@ class FoodOffer(models.Model):
         choices = CHOICES,
         default = CHOICE_MAYBE,
     )
+
+    nuts = models.CharField(
+        _('does it contain nuts (including pine nuts)?'),
+        max_length=200,
+        blank=True,
+    )
+
     reply_date = models.DateField(
         blank = True,
         null = True,
