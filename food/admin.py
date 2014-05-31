@@ -8,7 +8,6 @@ class FoodOfferAdmin(admin.ModelAdmin):
         'user',
         'can_bring',
         'name',
-        'description',
         'portions',
         'is_vegan',
         'is_gluten_free',
