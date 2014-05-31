@@ -245,6 +245,7 @@ INSTALLED_APPS = (
     "wedding",
     "crispy_forms",
     "users",
+    "mezzanine.accounts",
     "mezzanine.boot",
     "mezzanine.conf",
     "mezzanine.core",
