@@ -23,7 +23,6 @@ class FoodOfferAdmin(admin.ModelAdmin):
     )
 
     search_fields = (
-        'user',
         'name',
         'description',
         'nuts',
