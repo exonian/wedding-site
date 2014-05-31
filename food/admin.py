@@ -13,7 +13,7 @@ class FoodOfferAdmin(admin.ModelAdmin):
         'is_vegan',
         'is_gluten_free',
         'nuts',
-        'reply_date',
+        'get_reply_date',
     )
 
     list_filter = (
