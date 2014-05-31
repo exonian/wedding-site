@@ -14,6 +14,11 @@ class UserAdmin(admin.ModelAdmin):
         'get_rsvp',
     )
 
+    list_filter = (
+        'attending',
+        'is_staff',
+    )
+
     def get_rsvp_date(self, obj):
         return obj.rsvp_date or ''
     get_rsvp_date.short_description = 'RSVP date'
