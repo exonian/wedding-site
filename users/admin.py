@@ -6,6 +6,14 @@ from django.utils import timezone
 from food.admin import FoodOfferInline
 from models import WeddingUser
 
+
+class ProxyUser(WeddingUser):
+    class Meta:
+        proxy = True
+        verbose_name = 'user and RSVP'
+        verbose_name_plural = 'users and RSVPs'
+
+
 class UserAdmin(admin.ModelAdmin):
     list_display = (
         'long_name',
@@ -58,4 +66,5 @@ class UserAdmin(admin.ModelAdmin):
         )
     has_logged_in.boolean = True
 
-admin.site.register(WeddingUser, UserAdmin)
+admin.site.register(WeddingUser)
+admin.site.register(ProxyUser, UserAdmin)
