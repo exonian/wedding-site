@@ -25,6 +25,17 @@ class UserAdmin(admin.ModelAdmin):
         'email',
     )
 
+    fields = (
+        'short_name',
+        'long_name',
+        'email',
+        'attending',
+        'rsvp_message',
+        'rsvp_date',
+        'last_login',
+    )
+    readonly_fields = fields
+
     def get_rsvp_date(self, obj):
         return obj.rsvp_date or ''
     get_rsvp_date.short_description = 'RSVP date'
