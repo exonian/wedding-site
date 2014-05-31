@@ -19,6 +19,12 @@ class UserAdmin(admin.ModelAdmin):
         'is_staff',
     )
 
+    search_fields = (
+        'short_name',
+        'long_name',
+        'email',
+    )
+
     def get_rsvp_date(self, obj):
         return obj.rsvp_date or ''
     get_rsvp_date.short_description = 'RSVP date'
