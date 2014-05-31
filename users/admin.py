@@ -2,6 +2,8 @@ import datetime
 
 from django.contrib import admin
 from django.utils import timezone
+
+from food.admin import FoodOfferInline
 from models import WeddingUser
 
 class UserAdmin(admin.ModelAdmin):
@@ -35,6 +37,8 @@ class UserAdmin(admin.ModelAdmin):
         'last_login',
     )
     readonly_fields = fields
+
+    inlines = [FoodOfferInline]
 
     def get_rsvp_date(self, obj):
         return obj.rsvp_date or ''
