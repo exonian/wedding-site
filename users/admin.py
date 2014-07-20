@@ -22,6 +22,7 @@ class UserAdmin(admin.ModelAdmin):
         'last_login',
         'get_rsvp_date',
         'get_rsvp',
+        'get_plus_one',
     )
 
     list_filter = (
@@ -65,6 +66,11 @@ class UserAdmin(admin.ModelAdmin):
             timezone.get_default_timezone()
         )
     has_logged_in.boolean = True
+
+    def get_plus_one(self, obj):
+        return obj.plus_one
+    get_plus_one.short_description = 'Was offered plus one'
+    get_plus_one.boolean = True
 
 admin.site.register(WeddingUser)
 admin.site.register(ProxyUser, UserAdmin)
